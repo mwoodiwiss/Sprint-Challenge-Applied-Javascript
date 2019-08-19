@@ -21,21 +21,21 @@
 
 axios.get('https://lambda-times-backend.herokuapp.com/articles')
 .then( response => {
-    console.log(response.data.articles)
-    const nodelist = response.data.articles
-    console.log(nodelist)
-    const articleArray = Array.from(nodelist)
+    const articleArray = Object.values(response.data.articles)
     console.log(articleArray)
-    articleArray.forEach(art => {    
+    articleArray.forEach(art => {  
+        console.log(art)
         art.forEach(element => {
-            document.querySelector('.cards-container').appendChild(articleCard(element))
+            document.querySelector('.cards-container').append(articleCard(element))
         })
     })
 })
 
+
 .catch( error => {
     console.log( error )
 })
+
 
 function articleCard(array) {
     const container = document.createElement('div')
@@ -60,7 +60,7 @@ function articleCard(array) {
   
     const authorsName = document.createElement('span')
     authorsName.textContent = `By ${array.authorName}`
-    authorsName.appendChild(authorsName)
+    authorInfo.appendChild(authorsName)
   
     return container
   }
