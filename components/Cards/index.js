@@ -22,9 +22,9 @@
 axios.get('https://lambda-times-backend.herokuapp.com/articles')
 .then( response => {
     const articleArray = Object.values(response.data.articles)
-    console.log(articleArray)
+    // console.log(articleArray)
     articleArray.forEach(art => {  
-        console.log(art)
+        // console.log(art)
         art.forEach(element => {
             document.querySelector('.cards-container').append(articleCard(element))
         })
