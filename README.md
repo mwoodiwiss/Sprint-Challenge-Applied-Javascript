@@ -29,14 +29,19 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
 1. What is the DOM?
+The Document Object Model is a cross-platform and language-independent interface that treats an XML or HTML document as a tree structure wherein each node is an object representing a part of the document.
 
 2. What is an event?
+An event is an action or input from a user.
 
 3. What is an event listener?
+An event listener waits for an event then executes a predetermined piece of code.
 
 4. Why would we convert a NodeList into an Array?
+So we can execute methods on the objects.
 
 5. What is a component?
+Components are a suite of different technologies allowing you to create reusable custom elements.
 
 ### Git Set up
 
